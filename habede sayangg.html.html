@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎂 Selamat Ulang Tahun Nddutttt Sayang! 💖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right top, #ffe3e3, #f0f8ff);
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* --- Judul Animasi --- */
+        .header-text {
+            font-family: 'Pacifico', cursive;
+            font-size: clamp(2.5em, 8vw, 5em);
+            color: #ff1493;
+            text-shadow: 3px 3px 5px rgba(255, 105, 180, 0.7);
+            margin-bottom: 40px;
+            animation: textGlow 2s infinite alternate;
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 3px 3px 5px rgba(255, 105, 180, 0.7); }
+            100% { text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493; }
+        }
+
+        /* --- Slideshow Container --- */
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            width: 90%;
+            margin: auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .mySlides {
+            display: none;
+            /* Efek transisi saat berganti slide */
+            animation: slideFade 1.5s ease-in-out; 
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        @keyframes slideFade {
+            from { opacity: 0.8; transform: scale(1.05); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* --- Teks Tambahan --- */
+        .doa-text {
+            margin-top: 30px;
+            font-style: italic;
+            color: #4a0082;
+            max-width: 800px;
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="header-text">Selamat Ulang Tahun Nddutttt Sayang! 🎉</h1>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides">
+            <img src="https://i.ibb.co.com/jkvy8G1M/HXJUE4008.jpg" alt="Foto Nddut 1">
+        </div>
+
+        <div class="mySlides">
+            <img src="https://i.ibb.co.com/RThcc9bN/IMG-0726.jpg" alt="Foto Nddut 2">
+        </div>
+
+        <div class="mySlides">
+            <img src="https://i.ibb.co.com/931Tt4mL/IMG-0566.jpg" alt="Foto Nddut 3">
+        </div>
+
+        <div class="mySlides">
+            <img src="https://i.ibb.co.com/VcDm5jNz/IMG-2226.jpg" alt="Foto Nddut 3">
+        </div>
+
+        <div class="mySlides">
+            <img src="https://i.ibb.co.com/PGb13mrq/IMG-E2384.jpg" alt="Foto Nddut 3">
+        </div>
+        
+        </div>
+
+    <p class="doa-text">
+        Semoga panjang umur sayanggg, diberikan kesehatan yang panjang, kebahagiaan yang abadi, dan rezeki yang melimpah ruah. <br>
+        Selalu menjadi pasangan yg setia, di kurangin mager nya ya sayanggggg,smpe tua sm aku yaaaa. I love you, Nddut! ❤️
+    </p>
+
+    <script>
+        let slideIndex = 0;
+        carousel(); // Panggil fungsi otomatis saat halaman dimuat
+
+        function carousel() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          
+          // Sembunyikan semua slide
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          
+          slideIndex++;
+          
+          // Jika mencapai akhir, kembali ke slide pertama
+          if (slideIndex > slides.length) {
+              slideIndex = 1
+          }
+          
+          // Tampilkan slide yang aktif
+          slides[slideIndex-1].style.display = "block";
+          
+          // Ganti gambar setiap 2000 milidetik (2 detik)
+          setTimeout(carousel, 2000); 
+        }
+    </script>
+
+</body>
+</html>
